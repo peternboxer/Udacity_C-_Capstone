@@ -21,7 +21,12 @@ int main(int argc, char **argv)
   Controller controller;
   Game game(kGridWidth, kGridHeight);
 
-  if (argc >= 2){
+  if(argc !=2){
+    printHelp();
+      return EXIT_FAILURE;
+  }
+
+  else if(argc = 2){
     if (strcmp(argv[1], "-s") == 0){
       mode = 0;
       std::cout<<"Single mode...\n";
